@@ -10,7 +10,7 @@ MainWidget::MainWidget(QWidget *parent)
     b2 = new QPushButton(this); //指定父对象，构造函数传参
     b2->setText("abc");
 
-    connect(&b1, &QPushButton::pressed, this, &MainWidget::close);
+    connect(&b1, &QPushButton::pressed, this, &MainWidget::close);  //按下b1按钮，产生pressed信号来实现一个规则（this窗口自动来close关闭）
     /* &b1:信号发出者，指针类型
      * &QPushButton::pressed: 处理的信号， &发送者的类名::信号名字
      * this: 信号接收者

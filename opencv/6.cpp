@@ -21,7 +21,7 @@ void onTrackbarSlider(int pos)
 int main()
 {
 	cvNamedWindow("show_avi");   //创建窗口
-	capture = cvCreateFileCapture("F:\\BaiduYunDownload\\arm开发\\03 - ARM准备工作及熟悉开发板3.avi");
+	capture = cvCreateFileCapture("C:/Users/俊松/Documents/baidudownload/day01视频/3_视频/01_为什么学习QT.mp4");
 	
 	//获取总帧数
 	int frames = (int)cvGetCaptureProperty(

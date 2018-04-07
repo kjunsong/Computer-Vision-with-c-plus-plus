@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #include<opencv2\opencv.hpp> 
 
-CvCapture* capture = NULL;
+CvCapture* capture = NULL; //初始化变量 对应avi文件开头
 int slider_position = 0;
 
 int frame_count = 0;

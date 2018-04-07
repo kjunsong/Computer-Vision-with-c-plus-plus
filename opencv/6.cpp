@@ -1,7 +1,6 @@
-//ÊÓÆµ²¥·Å¿ØÖÆ
+//è§†é¢‘æ’­æ”¾æ§åˆ¶
 #include "stdafx.h"
-#include "highgui.h"
-#include "cv.h"
+#include<opencv2\opencv.hpp> 
 
 CvCapture* capture = NULL;
 int slider_position = 0;
@@ -21,23 +20,23 @@ void onTrackbarSlider(int pos)
 
 int main()
 {
-	cvNamedWindow("show_avi");   //´´½¨´°¿Ú
-	capture = cvCreateFileCapture("F:\\BaiduYunDownload\\arm¿ª·¢\\03 - ARM×¼±¸¹¤×÷¼°ÊìÏ¤¿ª·¢°å3.avi");
+	cvNamedWindow("show_avi");   //åˆ›å»ºçª—å£
+	capture = cvCreateFileCapture("F:\\BaiduYunDownload\\armå¼€å‘\\03 - ARMå‡†å¤‡å·¥ä½œåŠç†Ÿæ‚‰å¼€å‘æ¿3.avi");
 	
-	//»ñÈ¡×ÜÖ¡Êı
+	//è·å–æ€»å¸§æ•°
 	int frames = (int)cvGetCaptureProperty(
 		capture,
 		CV_CAP_PROP_FRAME_COUNT
 		);
 
-	if (frames > 0)  //ÉèÖÃ¹ö¶¯Ìõ
+	if (frames > 0)  //è®¾ç½®æ»šåŠ¨æ¡
 	{ 
 		cvCreateTrackbar(
-				"Position",        //¹ö¶¯ÌõÃû×Ö
-				"show_avi",		   //´°¿ÚÃû×Ö	
-				&slider_position,  //µ±Ç°¹ö¶¯ÌõËùÔÚÎ»ÖÃ
-				frames,            //×Ü³¤¶È
-				onTrackbarSlider   //À­¶¯½ø¶ÈÌõ¾Í»áÖ´ĞĞ´Ëº¯Êı
+				"Position",        //æ»šåŠ¨æ¡åå­—
+				"show_avi",		   //çª—å£åå­—	
+				&slider_position,  //å½“å‰æ»šåŠ¨æ¡æ‰€åœ¨ä½ç½®
+				frames,            //æ€»é•¿åº¦
+				onTrackbarSlider   //æ‹‰åŠ¨è¿›åº¦æ¡å°±ä¼šæ‰§è¡Œæ­¤å‡½æ•°
 				);
 	}
 

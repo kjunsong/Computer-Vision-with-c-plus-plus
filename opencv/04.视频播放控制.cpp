@@ -58,7 +58,7 @@ int main()
 		cvSetTrackbarPos("Position", "show_avi", frame_count);
 		frame_count++;
 	}
-	cvShowImage("show_avi",NULL);
+	cvShowImage("show_avi",NULL);	//如果没有视屏输入，会跳过while执行此句
 	cvWaitKey(0);
 
 	return 0;

@@ -6,7 +6,7 @@ CvCapture* capture = NULL; //初始化变量 对应avi文件开头
 int slider_position = 0;   //滚动条位置定义一个全局变量
 int frame_count = 0; 	   //计数用
 
-void onTrackbarSlider(int pos)
+void onTrackbarSlider(int pos)  //移动鼠标时传入的参数pos
 {
 	cvSetCaptureProperty(
 			    capture,		    //avi文件地址

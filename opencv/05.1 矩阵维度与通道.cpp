@@ -1,4 +1,4 @@
-//写入avi文件
+//脨麓脠毛avi脦脛录镁
 #include "stdafx.h"
 #include "highgui.h"
 #include "cv.h"
@@ -14,7 +14,7 @@ int main()
 	 65,68,96,34,24,42
 	};
 	CvMat mat;
-	cvInitMatHeader(&mat,3,6,CV_32FC1,data); //CV_32FC1：单通道
+	cvInitMatHeader(&mat,3,6,CV_32FC1,data); //CV_32FC1拢潞碌楼脥篓碌脌
 	for (int y = 0; y < mat.rows; y++)
 	{
 		for (int x = 0; x < mat.cols; x++)

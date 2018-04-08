@@ -1,10 +1,5 @@
-//Ð´ÈëaviÎÄ¼þ
 #include "stdafx.h"
-#include "highgui.h"
-#include "cv.h"
-#include"cxcore.h"
-#include <stdlib.h>
-#include <stdio.h>
+#include <opencv2\opencv.hpp>
 
 int main()
 {
@@ -27,3 +22,9 @@ int main()
 	return 0;
 }
 
+/*
+30.000000 60.000000 40.000000 60.000000 50.000000 40.000000
+67.000000 88.000000 23.000000 23.000000 45.000000 56.000000
+65.000000 68.000000 96.000000 34.000000 24.000000 42.000000
+请按任意键继续. . .
+*/

@@ -3,19 +3,18 @@
 #include<opencv2\opencv.hpp> 
 
 CvCapture* capture = NULL; //初始化变量 对应avi文件开头
-int slider_position = 0;
-
-int frame_count = 0;
+int slider_position = 0;   //滚动条位置定义一个全局变量
+int frame_count = 0; 	   //计数用
 
 void onTrackbarSlider(int pos)
 {
 	cvSetCaptureProperty(
-		capture,
-		CV_CAP_PROP_POS_FRAMES,
-		pos
-		);
+			    capture,		    //avi文件地址
+			    CV_CAP_PROP_POS_FRAMES, //以帧数来设置读入位置
+			    pos			    //传进来的参数
+			    );
 
-	frame_count = pos;
+	frame_count = pos; 		//???
 }
 
 int main()
@@ -33,7 +32,7 @@ int main()
 	{ 
 		cvCreateTrackbar(
 				"Position",        //滚动条名字
-				"show_avi",		   //窗口名字	
+				"show_avi",	   //窗口名字	
 				&slider_position,  //当前滚动条所在位置
 				frames,            //总长度
 				onTrackbarSlider   //拉动进度条就会执行此函数
@@ -43,7 +42,7 @@ int main()
 	IplImage* frame;
 	while (1)
 	{
-		frame = cvQueryFrame(capture);
+		frame = cvQueryFrame(capture);    //将下一帧内容载入内存
 		if (!frame)
 		{
 			break;

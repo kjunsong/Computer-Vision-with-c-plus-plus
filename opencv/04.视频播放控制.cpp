@@ -55,7 +55,7 @@ int main()
 		{
 			break;
 		}
-		cvSetTrackbarPos("Position", "show_avi", frame_count);
+		cvSetTrackbarPos("Position", "show_avi", frame_count);//随着视频的播放，滑动条位置再改变
 		frame_count++;
 	}
 	cvShowImage("show_avi",NULL);	//如果没有视屏输入，会跳过while执行此句
